@@ -16,7 +16,7 @@ body {
     height: 100%;
 }
 
-.gameGrid {
+#gameGrid {
     height: 600px;
     width: 600px;
     display: grid;
