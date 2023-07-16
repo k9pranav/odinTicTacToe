@@ -26,11 +26,6 @@ let player2 = gamePlayer('Kansal', '0');
 
 var gameGrid = document.querySelectorAll('div.griditem');
 
-// gameGrid.forEach(
-//     (cell, index) => 
-//       cell.textContent=`Cell ${index}`
-//   );
-
 function gameArrayOnDisplay(array) {
     for (let i = 0; i < array.length; i++) {
         gameGrid[i].innerHTML = array[i]
@@ -38,6 +33,32 @@ function gameArrayOnDisplay(array) {
 }
 
 
-let array = ['','X','','','X','','','X',''];
+// let array = ['O','X','','O','X','O','','X',''];
 
-gameArrayOnDisplay(array);
+// gameArrayOnDisplay(array);
+
+var gameCounter = 0;
+
+
+
+
+for (let i = 0; i < gameGrid.length; i++) {
+
+    gameGrid[i].addEventListener('click', function(){
+        
+        if (gameboard.boardArray[i] == ''){
+        
+            if (gameCounter%2 == 0){
+                // console.log('Even')
+                gameboard.boardArray[i] = 'X';
+                gameArrayOnDisplay(gameboard.boardArray);
+                gameCounter += 1;
+            } else {
+                console.log('Odd')
+                // gameboard.boardArray[i] = 'O';
+                gameArrayOnDisplay(gameboard.boardArray);
+                gameCounter += 1;
+            }
+        }
+    })
+}
