@@ -1,0 +1,36 @@
+body {
+    height: max-content;
+}
+
+.head {
+    height: 200px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.container {
+    background-color: bisque;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.gameGrid {
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: solid black;
+    gap: 10px;
+    
+}
+
+.griditem {
+    border: dotted black;
+    text-align: center;
+    padding-top: 80px;
+    vertical-align: middle;
+    font-size: xx-large;
+}
