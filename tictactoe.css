@@ -34,3 +34,11 @@ body {
     vertical-align: middle;
     font-size: xx-large;
 }
+
+.footer {
+    background-color:blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
