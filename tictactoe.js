@@ -44,7 +44,11 @@ for (let i = 0; i < gameGrid.length; i++) {
 
     gameGrid[i].addEventListener('click', function(){
         
-        if (gameboard.boardArray[i] == ''){
+        if (checkWinner(gameboard.boardArray) == 'O Won' || checkWinner(gameboard.boardArray) == 'X Won'){
+            return 
+        }
+        
+        else if (gameboard.boardArray[i] == ''){
         
             if (gameCounter%2 == 0){
                 // console.log('Even')
@@ -74,7 +78,7 @@ let winnerCombos = [
     [2,4,6]
 ];
 
-let running = true;
+let gameEnd = false;
 
 
 function checkWinner(array){
@@ -101,7 +105,7 @@ function checkWinner(array){
 
     if (roundWon){
         if (gameCounter%2 == 0){
-            return 'X won';
+            return 'X Won';
         } else{
             return 'O Won';
         }
